@@ -42,7 +42,7 @@ from ConfigParser import ConfigParser
 
 # data are produced every 10 seconds, by default
 # we read real used interval in log file (deduced from timestamps)
-INTERVAL  = 10
+INTERVAL  = 5
 SEPARATOR = "# stats: dump at "
 PREFIX    = "stats: "
 
@@ -231,4 +231,3 @@ if __name__ == '__main__':
     pprint(tsunglog.stat('users', 'max'))
     pprint(tsunglog.stat('finish_users_count', 'count'))
     pprint(tsunglog.stat('200', 'count'))
-

@@ -97,6 +97,7 @@ class Plot:
             clf()
             ax = subplot(111)
             ax.set_yscale(self.yscale)
+            ax.set_ylim(0, 1)
 
             count = 0
             for data in dataset:
@@ -221,7 +222,7 @@ def main(conffile, logs, legends, outdir, verbose):
                           for x in clegends]
                 count += 1
         p.legends = l
-        
+
         if config.has_option(s, 'position'):
             # legend position according to matplotlib standard values (1-10)
             val = config.get(s, 'position').decode(encoding)
@@ -229,7 +230,7 @@ def main(conffile, logs, legends, outdir, verbose):
                 p.position = int(val)
             else:
                 p.position = val
-            
+
 
         if config.has_option(s, 'yfactor'):
             try:
